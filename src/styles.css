@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+@font-face {
+  font-family: "Array";
+  src: url("/Array_Complete/Fonts/OTF/Array-Bold.otf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background: #eee;
+  --primary: #0c0c0c;
+  --Secondary: #fff;
+  --Accent: #d65a31;
+}
+body {
+  background: var(--background);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+h1 {
+  font-size: 96px;
+  color: var(--primary);
+  font-family: "Array", sans-serif;
+}
+.board {
+  min-width: 25vw;
+  min-height: 25vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.box {
+  background: var(--Secondary);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(25vw / 3);
+  border: 2px solid var(--primary);
+  height: calc(25vw / 3);
+  font-size: 72px;
+  font-family: "Array", sans-serif;
+}
+.box:hover {
+  background: var(--background);
+}
+.charecter {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+button {
+  background-color: var(--Secondary);
+  color: var(--primary);
+  font-family: "Array";
+  /*Matchthepixelatedstyle*/
+  font-size: 18px;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  margin: 30px 0;
+}
+button:hover {
+  background-color: var(--Accent);
+  color: var(--Secondary);
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+#img1 {
+  width: 110%;
+}
+#img2 {
+  width: 125%;
+}
