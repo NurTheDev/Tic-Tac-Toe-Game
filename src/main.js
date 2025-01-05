@@ -4,7 +4,8 @@ let resultLost = document.querySelector(".result-lost");
 let turn = "X";
 let buttons = document.querySelectorAll("button");
 let isGameOver = false;
-
+let imgX = document.getElementById("img2");
+let imgO = document.getElementById("img1");
 let WinCheck = () => {
   let winCondition = [
     [0, 1, 2],
@@ -57,9 +58,13 @@ boxes.forEach((box) => {
       drawCheck();
       if (turn === "X") {
         turn = "O";
+        imgX.style.opacity = "0.2";
+        imgO.style.opacity = "1";
       } else {
         turn = "X";
         box.style.color = "var(--Accent)";
+        imgO.style.opacity = "0.2";
+        imgX.style.opacity = "1";
       }
     }
   });
