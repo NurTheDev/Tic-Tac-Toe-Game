@@ -2,7 +2,7 @@ let boxes = document.querySelectorAll(".box");
 let container = document.querySelector(".container");
 let resultLost = document.querySelector(".result-lost");
 let turn = "X";
-let button = document.querySelector("button");
+let buttons = document.querySelectorAll("button");
 let isGameOver = false;
 
 let WinCheck = () => {
@@ -64,3 +64,19 @@ boxes.forEach((box) => {
     }
   });
 });
+for (let button of buttons) {
+  button.addEventListener("click", () => {
+    isGameOver = false;
+    turn = "X";
+
+    boxes.forEach((e) => {
+      e.innerHTML = "";
+      e.style.removeProperty("background-color");
+      e.style.color = "var(--primary)";
+    });
+    container.style.opacity = "1";
+    document.querySelector(".result-lost").style.display = "none";
+    document.querySelector(".result-win").style.display = "none";
+    document.querySelector(".container").style.display = "flex";
+  });
+}
