@@ -16,6 +16,8 @@
 }
 body {
   background: var(--background);
+  display: flex;
+  flex-direction: column;
 }
 .container {
   max-width: 1200px;
@@ -25,13 +27,19 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
 }
-h1 {
+.game {
+  display: flex;
+  flex-direction: column;
+}
+h1,
+.loseTitle,
+.winTitle {
   font-size: 96px;
   color: var(--primary);
   font-family: "Array", sans-serif;
 }
+
 .board {
   min-width: 25vw;
   min-height: 25vw;
@@ -96,4 +104,12 @@ button:hover {
 }
 #img2 {
   width: 125%;
+}
+.result-lost,
+.result-win {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
