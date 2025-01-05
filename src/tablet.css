@@ -1,0 +1,26 @@
+@media (min-width: 576.1px) and (max-width: 768px) {
+  h1,
+  .loseTitle,
+  .winTitle {
+    font-size: 85px;
+  }
+  .board {
+    min-width: 95vw;
+    min-height: 95vw;
+  }
+  .box {
+    width: calc(95vw / 3);
+
+    height: calc(95vw / 3);
+  }
+  .container {
+    margin: 0;
+    padding: 0 0px;
+  }
+  #img2 {
+    width: 110%;
+  }
+  #img1 {
+    width: 100%;
+  }
+}
